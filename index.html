@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Generador de contraseñas</title>
+    <link rel="icon" href="img/icono_candado.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="Titulo">Generador de Contraseñas</h2>
+        <label class="titulo_longitud" for="length">Longitud de Contraseña:</label>
+        <input type="number" id="length" value="20">
+        <br>
+        <div class="checkbox-group">
+            <label class="titulo_mayusculas">
+                <input type="checkbox" id="incluirMayusculas" checked>
+                <span class="switch"></span> Incluir mayúsculas
+            </label>
+            <br>
+            <label class="titulo_minusculas">
+                <input type="checkbox" id="incluirMinusculas" checked>
+                <span class="switch"></span> Incluir minúsculas
+            </label>
+            <br>
+            <label class="titulo_numeros">
+                <input type="checkbox" id="incluirNumeros" checked>
+                <span class="switch"></span> Incluir números
+            </label>
+            <br>
+            <label class="titulo_simbolos">
+                <input type="checkbox" id="incluirSimbolos" checked>
+                <span class="switch"></span> Incluir símbolos
+            </label>
+        </div>
+        <button id="generate">Generar Contraseña</button>
+        <input type="text" id="passwordInput" readonly>
+        <button id="copiar">Copiar Contraseña</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

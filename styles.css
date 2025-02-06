@@ -1,0 +1,203 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: #E4DCCF;
+    padding: 20px;
+    color: black;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.titulo_longitud{
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.checkbox-group {
+    text-align: left;
+    margin-top: 40px;
+}
+
+/* Estilos para los checkboxes */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    vertical-align: middle;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    left: 2px;
+    top: 1px;
+    transition: left 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .switch::before {
+    left: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label.titulo_mayusculas,
+label.titulo_minusculas,
+label.titulo_numeros,
+label.titulo_simbolos {
+    position: relative;
+}
+
+label.titulo_mayusculas .switch,
+label.titulo_minusculas .switch,
+label.titulo_numeros .switch,
+label.titulo_simbolos .switch {
+    margin-top: 0;
+}
+
+input[type="checkbox"]:checked + .switch {
+    background-color: #98f10a;
+}
+
+input[type="checkbox"] + .switch {
+    background-color: #cbc7ba;
+}
+
+.switch-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 20px;
+    z-index: -1;
+    cursor: pointer;
+}
+
+button {
+    background-color: #98f10a;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #cbc7ba;
+}
+
+#passwordInput {
+    margin-top: 10px;
+    width: 20%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#copiar {
+    background-color: #98f10a;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#copiar:hover {
+    background-color: #d5d4cf;
+}
+
+#length {
+    display: inline-block;
+    width: 20%;
+    height: 25px;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#passwordInput {
+    display: inline-block;
+    width: 70%;
+    padding: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+/* Media Query para pantallas medianas */
+@media screen and (max-width: 991.98px) {
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .checkbox-group {
+        align-self: flex-start;
+        margin-left: 20%;
+    }
+
+    #length {
+        width: 15%;
+    }
+    #passwordInput {
+        width: 40%;
+    }
+    /* Ajuste para el botón de generar contraseña */
+    #generate {
+        margin-top: 30px;
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #length{
+        width: 20%;
+    }
+    #passwordInput {
+        width: 70%;
+    }
+}
